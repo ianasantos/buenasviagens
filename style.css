@@ -1,0 +1,591 @@
+body {
+    font-family: sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #1e3a8a; 
+    padding: 1em 0;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    margin: 0;
+    font-size: 1.8em; 
+    font-weight: bold; 
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em; 
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+#hero {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    background-color: #3b82f6;
+    background-size: cover;
+    background-position: center;
+    height: 810px;
+    overflow: hidden;
+}
+
+#hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#hero .hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#hero .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+#hero h2 {
+    font-size: 3em; 
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.search-form {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+}
+
+.search-form .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.search-form label {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-buscar {
+    padding: 10px 20px;
+    background-color: #f97316;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    height: 40px;
+}
+
+.btn-buscar:hover {
+    background-color: #ea580c;
+}
+
+
+#proximos-passeios {
+    padding: 50px 0;
+    background-color: #f8fafc; 
+    box-sizing: border-box; 
+}
+
+#proximos-passeios .container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+#proximos-passeios .texto-passeios {
+    flex: 1;
+}
+
+#proximos-passeios h2 {
+    font-size: 2em; 
+    color: #6d28d9; 
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+   
+    padding-bottom: 10px;
+    border-bottom: 3px solid #facc15;
+    display: inline-block; 
+}
+
+#proximos-passeios p {
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 20px;
+}
+
+.btn-saiba-mais {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #facc15;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #eab308;
+}
+
+#proximos-passeios .imagens-passeios {
+    flex-basis: 320px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+#proximos-passeios .imagens-passeios img {
+    width: 100%;
+    height: 120px; 
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+#destinos-sugeridos {
+    padding: 50px 0;
+    background-image: linear-gradient(to bottom right, #e9d5ff, #fbcfe8); 
+}
+
+#destinos-sugeridos h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #6d28d9; 
+    margin-bottom: 30px;
+}
+
+.cards-destinos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden; 
+}
+
+.card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    height: 60px;
+    overflow: hidden; 
+}
+
+.card .preco {
+    margin-bottom: 15px;
+}
+
+.card .preco-atual {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #166534; 
+    margin-right: 10px;
+}
+
+.card .preco-antigo {
+    font-size: 0.9em;
+    color: #777;
+    text-decoration: line-through;
+}
+
+.btn-saiba-mais-card {
+    display: block; 
+    padding: 10px 15px;
+    background-color: #facc15; 
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-saiba-mais-card:hover {
+    background-color: #eab308; 
+}
+
+
+#avaliacoes {
+    padding: 50px 0;
+    background-color: #f8fafc; 
+}
+#avaliacoes h2 {
+    text-align: center;
+    font-size: 2em; 
+    color: #6d28d9; 
+    margin-bottom: 30px;
+}
+
+.avaliacao-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.seta-nav {
+    background-color: #e5e7eb; 
+    border: none;
+    color: #4b5563; 
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+.seta-nav:hover {
+    background-color: #d1d5db; 
+}
+
+.avaliacao-item {
+    flex-grow: 1;
+}
+
+.citacao {
+    font-style: italic;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.cliente-info {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+.cliente-foto {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cliente-nome {
+    font-weight: bold;
+    color: #1f2937; 
+    margin: 0;
+}
+
+
+footer {
+    background-color: #374151; 
+    color: #d1d5db; 
+    padding: 40px 0 0; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-coluna {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-coluna h3 {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-coluna h4 {
+    font-size: 1.1em;
+    color: #e5e7eb; 
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-coluna p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-coluna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-coluna ul li {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.footer-coluna ul li a {
+    color: #d1d5db;
+    text-decoration: none;
+}
+
+.footer-coluna ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.newsletter-form input[type="email"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #4b5563; 
+    border-radius: 4px 0 0 4px; 
+    background-color: #4b5563;
+    color: white;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+    color: #9ca3af;
+}
+
+.btn-enviar-newsletter {
+    padding: 10px 15px;
+    background-color: #facc15;
+    color: #333;
+    border: none;
+    border-radius: 0 4px 4px 0; 
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-enviar-newsletter:hover {
+    background-color: #eab308;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 10px;
+}
+
+.icone-social {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #4b5563; 
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px; 
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.icone-social:hover {
+    background-color: #facc15; 
+    color: #333;
+}
+
+.footer-bottom {
+    background-color: #1f2937; 
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 20px;
+
+}
+@media (max-width: 992px) {
+    .search-form {
+        flex-direction: column;
+        align-items: stretch; 
+    }
+
+    .search-form .form-group {
+        width: 100%;
+    }
+
+    .btn-buscar {
+        width: 100%; 
+    }
+
+    #proximos-passeios .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #proximos-passeios .texto-passeios {
+        margin-bottom: 30px;
+    }
+
+    #proximos-passeios h2 {
+        display: block;
+        border-bottom: 3px solid #facc15;
+    }
+
+    #proximos-passeios .imagens-passeios {
+        margin: 0 auto; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+    }
+
+    #hero h2 {
+        font-size: 2.5em; 
+    }
+
+    .cards-destinos {
+        grid-template-columns: 1fr; 
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+    }
+
+    .footer-coluna {
+        min-width: 100%; 
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-form input[type="email"],
+    .btn-enviar-newsletter {
+        width: 100%;
+        border-radius: 4px; 
+    }
+
+    .redes-sociais {
+        justify-content: center; 
+    }
+
+    #avaliacoes .avaliacao-slider {
+        flex-direction: column;
+    }    
+}
+
+@media (max-width: 576px) {
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    .search-form {
+        padding: 15px;
+    }
+
+    #proximos-passeios .imagens-passeios{
+        grid-template-columns: 1fr; 
+    }
+
+    .btn-saiba-mais,
+    .btn-saiba-mais-card {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+} 
